@@ -1,11 +1,11 @@
-IF OBJECT_ID(N'Project.Apply') IS NULL
+IF OBJECT_ID(N'dbo.Apply') IS NULL
 BEGIN 
-CREATE TABLE Project.Apply(
-ApplyID int not identity(1,1) primary key  
+CREATE TABLE dbo.Apply(
+ApplyID int not null identity(1,1) primary key,  
 JobID int not null foreign key 
-	 REFERENCES Project.Job(JobID),
+	 REFERENCES dbo.Job(JobID),
 PersonID int not null foreign key 
-	 REFERENCES Project.Person(PersonID),
+	 REFERENCES dbo.Person(PersonID),
 DateApply DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()), 
 GPA Numeric(3,2) not null,
 Graduated Bit not null, 

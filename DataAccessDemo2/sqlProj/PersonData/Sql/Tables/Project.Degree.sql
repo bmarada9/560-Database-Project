@@ -1,9 +1,9 @@
-IF OBJECT_ID(N'Project.Degree') IS NULL
+IF OBJECT_ID(N'dbo.Degree') IS NULL
 BEGIN 
-CREATE table Project.Degree(
+CREATE table dbo.Degree(
 DegreeID INT NOT NULL primary key,
 Major NVARCHAR(128) NOT NULL,
 JobID int  foreign key 
-	REFERENCES Project.Job(JobID)
+	REFERENCES dbo.Job(JobID)
 );
 end

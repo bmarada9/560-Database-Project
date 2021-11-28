@@ -1,7 +1,7 @@
-IF OBJECT_ID(N'Project.School') IS NULL
+IF OBJECT_ID(N'dbo.School') IS NULL
 
 begin 
-create table Project.School(
+create table dbo.School(
 [Name] NVARCHAR(128) NOT NULL,
 SchoolID int not null, 
 [Size] int not null, 
