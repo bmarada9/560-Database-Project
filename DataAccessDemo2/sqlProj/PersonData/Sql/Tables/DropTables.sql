@@ -1,6 +1,6 @@
---Drop Table Drop Table If Exists Project.School
-Drop Table Drop Table If Exists Project.Person
---Drop Table Drop Table If Exists Project.Degree..What are the primary keys or unique keys here? We need them 
-Drop Table Drop Table If Exists Project.Apply
-Drop Table Drop Table If Exists Project.Job
---Drop Table Drop Table If Exists Project.Company 
+Drop Table Drop Table If Exists dbo.School
+Drop Table Drop Table If Exists dbo.Person
+Drop Table Drop Table If Exists dbo.Degree 
+Drop Table Drop Table If Exists dbo.Apply
+Drop Table Drop Table If Exists dbo.Job
+Drop Table Drop Table If Exists dbo.Company 
