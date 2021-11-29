@@ -10,13 +10,13 @@ namespace PersonData.Models
       public string Email { get; }
       public string Major { get; }
       public bool Graduated { get; }
-      public int PhoneNum { get; }
+      public string PhoneNum { get; }
       public int SchoolID { get; }
       public int ExpSalary { get; }
       public string Comments { get; }
 
       public Person(int personId, string firstName, string lastName, string email, string major,
-       bool grad, int phoneNum, int schoolID, int salary, string comments)
+       bool grad, string phoneNum, int schoolID, int salary, string comments)
       {
          PersonId = personId;
          FirstName = firstName;

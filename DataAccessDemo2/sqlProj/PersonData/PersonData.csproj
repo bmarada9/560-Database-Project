@@ -42,40 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataDelegates\FetchPersonDataDelegate.cs" />
-    <Compile Include="DataDelegates\RetrieveAddressesForPersonDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchBestCandidateDelegate.cs" />
+    <Compile Include="DataDelegates\FetchCompanyAndSalaryDelegate.cs" />
+    <Compile Include="DataDelegates\FetchMostPopularSchoolDelegate.cs" />
+    <Compile Include="DataDelegates\NumberOfJobsDelegate.cs" />
     <Compile Include="DataDelegates\RetrievePersonsDataDelegate.cs" />
-    <Compile Include="DataDelegates\GetPersonDataDelegate.cs" />
-    <Compile Include="DataDelegates\CreatePersonDataDelegate.cs" />
-    <Compile Include="IAddressRepository.cs" />
-    <Compile Include="IPersonRepository.cs" />
-    <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\AddressType.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Job.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="DataDelegates\SavePersonAddressDataDelegate.cs" />
-    <Compile Include="SqlAddressRepository.cs" />
-    <Compile Include="SqlPersonRepository.cs" />
+    <Compile Include="Models\School.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Tables\DropTables.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Procedures\Person.RetrievePersons.sql" />
-    <EmbeddedResource Include="Sql\Procedures\Person.GetPerson.sql" />
-    <EmbeddedResource Include="Sql\Procedures\Person.CreatePerson.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Tables\Person.Person.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Tables\Person.AddressType.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Tables\Person.PersonAddress.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Data\Person.AddressType.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
@@ -84,16 +61,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Sql\Schemas\Person.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Procedures\Person.SavePersonAddress.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Procedures\Person.RetrieveAddressesForPerson.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\Procedures\Person.FetchPerson.sql" />
+    <Content Include="Sql\Data\dbo.CreateJob.sql" />
+    <Content Include="Sql\Data\dbo.CreatePerson.sql" />
+    <Content Include="Sql\Procedures\dbo.BestCandidate.sql" />
+    <Content Include="Sql\Procedures\dbo.ListOfJobs.sql" />
+    <Content Include="Sql\Procedures\dbo.NumberOfJobs.sql" />
+    <Content Include="Sql\Procedures\dbo.PopularSchool.sql" />
+    <Content Include="Sql\Sechema\dbo.sql" />
+    <Content Include="Sql\Tables\dbo.Apply.sql" />
+    <Content Include="Sql\Tables\dbo.Company.sql" />
+    <Content Include="Sql\Tables\dbo.Degree.sql" />
+    <Content Include="Sql\Tables\dbo.Job.sql" />
+    <Content Include="Sql\Tables\dbo.Person.sql" />
+    <Content Include="Sql\Tables\dbo.School.sql" />
+    <Content Include="Sql\Tables\DropTables.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

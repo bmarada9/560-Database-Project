@@ -7,31 +7,38 @@ namespace PersonData.DataDelegates
 {
    internal class FetchMostPopularSchoolDelegate : DataReaderDelegate<School>
    {
-      private readonly int companyName;
+      private readonly string companyName;
 
-      public FetchMostPopularSchoolDelegate(int CompanyName)
+      public FetchMostPopularSchoolDelegate(string companyName)
          : base("Person.FetchPerson")
       {
-         this.Name = CompanyName;
+         this.companyName = companyName;
       }
 
       public override void PrepareCommand(SqlCommand command)
       {
          base.PrepareCommand(command);
 
-         var p = command.Parameters.Add("Degree", SqlDbType.NVARCHAR);
-         p.Value = Degree;
+         var p = command.Parameters.Add("Degree", SqlDbType.NVarChar);
+         p.Value = companyName;
       }
 
-      public override Person Translate(SqlCommand command, IDataRowReader reader)
+      public override School Translate(SqlCommand command, IDataRowReader reader)
       {
          if (!reader.Read())
             throw new RecordNotFoundException(companyName);
 
-         return new Person(
+         return new School(
             reader.GetString("Name"),
+            reader.GetInt32("SchoolID"),
+            reader.GetInt32("Size"),
+            reader.GetString("City"),
+            reader.GetString("State"),
+            reader.GetInt32("GraduateRate"),
             reader.GetString("Mascot"),
-            reader.GetString("EstablishmentType"));
+            reader.GetString("TypeOfSchool"),
+            reader.GetInt32("YearlyAvgTuitionInState"),
+            reader.GetInt32("YearlyAvgTuitionOutState"));
       }
    }
 }

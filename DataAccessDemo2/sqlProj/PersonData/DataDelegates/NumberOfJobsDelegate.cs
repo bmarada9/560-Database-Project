@@ -9,30 +9,34 @@ namespace PersonData.DataDelegates
    {
       private readonly string CompName;
 
-      public NumberOfJobsDelegate(int personId)
+      public NumberOfJobsDelegate(string CompName)
          : base("Person.GetNumJobs")
       {
-         this.Name = CompName;
+         this.CompName = CompName;
       }
 
       public override void PrepareCommand(SqlCommand command)
       {
          base.PrepareCommand(command);
 
-         var p = command.Parameters.Add("Name", SqlDbType.NVARCHAR);
+         var p = command.Parameters.Add("Name", SqlDbType.NVarChar);
          p.Value = CompName;
       }
 
        public override Job Translate(SqlCommand command, IDataRowReader reader)
       {
           if (!reader.Read())
-            throw new RecordNotFoundException(personId.ToString());
+            throw new RecordNotFoundException(CompName);
 
-         return new Person(
+         return new Job(
              reader.GetString("Name"),
-             CompName,
-             reader.GetString("CompanyID"));
-         ;
-      }
-   }
+             reader.GetInt32("MinimumSalary"),
+             reader.GetInt32("CompanyID"),
+             reader.GetInt32("JobID"),
+             reader.GetString("MajorAccepted"),
+             reader.GetString("SupervisorLastName"),
+             reader.GetString("JobType"));
+
+        }
+    }
 }

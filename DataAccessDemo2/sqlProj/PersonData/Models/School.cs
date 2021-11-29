@@ -16,7 +16,7 @@ namespace PersonData.Models
       public int YearlyAvgTuitionOutState { get; }
 
       public School(string name, int schoolId, int size, string city, string state,
-       int gradRate, string mascot, string type, int tuitionIn, string tuitionOut)
+       int gradRate, string mascot, string type, int tuitionIn, int tuitionOut)
       {
          Name = name;
          SchoolID = schoolId;

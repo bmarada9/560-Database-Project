@@ -7,20 +7,20 @@ namespace PersonData.DataDelegates
 {
    internal class FetchBestCandidateDelegate : DataReaderDelegate<Person>
    {
-      private readonly int companyName;
+      private readonly string companyName;
 
-      public FetchBestCandidateDelegate(int CompanyName)
+      public FetchBestCandidateDelegate(string CompanyName)
          : base("Person.FetchPerson")
       {
-         this.Name = CompanyName;
+         this.companyName = CompanyName;
       }
 
       public override void PrepareCommand(SqlCommand command)
       {
          base.PrepareCommand(command);
 
-         var p = command.Parameters.Add("Degree", SqlDbType.NVARCHAR);
-         p.Value = Degree;
+         var p = command.Parameters.Add("Name", SqlDbType.NVarChar);
+         p.Value = companyName;
       }
 
       public override Person Translate(SqlCommand command, IDataRowReader reader)
@@ -29,12 +29,17 @@ namespace PersonData.DataDelegates
             throw new RecordNotFoundException(companyName);
 
          return new Person(
-            reader.GetString("Name"),
-            reader.GetString("FirstName"),
-            reader.GetString("LastName"),
-            reader.GetString("Major"),
-            reader.GetString("GPA"));
+             reader.GetInt32("PersonId"),
+             reader.GetString("FirstName"),
+             reader.GetString("LastName"),
+             reader.GetString("Email"),
+             reader.GetString("Major"),
+             reader.Equals("Grad"),
+             reader.GetString("phoneNum"),
+             reader.GetInt32("schoolID"),
+             reader.GetInt32("salary"),
+             reader.GetString("comments"));
 
-      }
+        }
    }
 }

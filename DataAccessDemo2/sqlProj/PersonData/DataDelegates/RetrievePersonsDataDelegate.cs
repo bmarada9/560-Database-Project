@@ -18,11 +18,17 @@ namespace PersonData.DataDelegates
 
          while (reader.Read())
          {
-            persons.Add(new Person(
-               reader.GetInt32("PersonId"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               reader.GetString("Email")));
+                persons.Add(new Person(
+                   reader.GetInt32("PersonId"),
+                   reader.GetString("FirstName"),
+                   reader.GetString("LastName"),
+                   reader.GetString("Email"),
+                   reader.GetString("Major"),
+                   reader.Equals("Grad"),
+                   reader.GetString("phoneNum"),
+                   reader.GetInt32("schoolID"),
+                   reader.GetInt32("salary"),
+                   reader.GetString("comments")));
          }
 
          return persons;

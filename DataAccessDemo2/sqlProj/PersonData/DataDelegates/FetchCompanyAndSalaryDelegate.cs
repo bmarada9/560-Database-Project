@@ -7,31 +7,38 @@ namespace PersonData.DataDelegates
 {
    internal class FetchCompanyAndSalaryDelegate : DataReaderDelegate<Company>
    {
-      private readonly int Degree;
+      private readonly string Degree;
 
-      public FetchPersonDataDelegate(int Degree)
+      public FetchCompanyAndSalaryDelegate(string Degree)
          : base("Person.FetchPerson")
       {
-         this.degree = Degree;
+         this.Degree = Degree;
       }
-
-      public override void PrepareCommand(SqlCommand command)
+ 
+        public override void PrepareCommand(SqlCommand command)
       {
          base.PrepareCommand(command);
 
-         var p = command.Parameters.Add("Degree", SqlDbType.NVARCHAR);
+         var p = command.Parameters.Add("Degree", SqlDbType.NVarChar);
          p.Value = Degree;
       }
 
-      public override Person Translate(SqlCommand command, IDataRowReader reader)
+      public override Company Translate(SqlCommand command, IDataRowReader reader)
       {
          if (!reader.Read())
             throw new RecordNotFoundException(Degree);
 
-         return new Person(
+         return new Company(
             reader.GetString("CompanyName"),
-            reader.GetString("AverageSalary"),
+            reader.GetInt32("CompanyID"),
+            reader.GetInt32("Size"),
+            reader.GetString("State"), 
+            reader.GetString("Country"),
+            reader.GetString("CeoFirstName"),
+            reader.GetString("CeoLastName"),
+            reader.GetInt32("YearEstablished"),
+            reader.GetInt32("NetWorth"),
             reader.GetString("JobType"));
-      }
+       }
    }
 }
