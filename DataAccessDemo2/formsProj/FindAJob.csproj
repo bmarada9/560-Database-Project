@@ -106,5 +106,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sqlProj\DataAccess\DataAccess.csproj">
+      <Project>{a5ac459d-6c0a-4d6e-ad65-ecb3e0fec3a7}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sqlProj\PersonData\PersonData.csproj">
+      <Project>{d51aa58c-05b9-4a7d-9f80-ccebf8a0eaf0}</Project>
+      <Name>PersonData</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

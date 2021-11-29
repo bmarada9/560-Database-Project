@@ -31,23 +31,24 @@
             this.companyTable = new System.Windows.Forms.TableLayoutPanel();
             this.tableTabs = new System.Windows.Forms.TabControl();
             this.companyTab = new System.Windows.Forms.TabPage();
-            this.schoolTab = new System.Windows.Forms.TabPage();
-            this.candidatesTab = new System.Windows.Forms.TabPage();
-            this.salaryTab = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.companyDropDown = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.schoolTab = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.schoolDropDown = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.schoolTable = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.companyDropDown = new System.Windows.Forms.ComboBox();
-            this.schoolDropDown = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.candidatesTab = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
             this.candidateDropDown = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,6 +57,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.candidateTable = new System.Windows.Forms.TableLayoutPanel();
+            this.salaryTab = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
             this.salaryDropDown = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -63,10 +66,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.salaryTable = new System.Windows.Forms.TableLayoutPanel();
-            this.homeButton = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.tableTabs.SuspendLayout();
             this.companyTab.SuspendLayout();
             this.schoolTab.SuspendLayout();
@@ -127,6 +126,85 @@
             this.companyTab.TabIndex = 0;
             this.companyTab.Text = "By Company";
             // 
+            // companyDropDown
+            // 
+            this.companyDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyDropDown.FormattingEnabled = true;
+            this.companyDropDown.Location = new System.Drawing.Point(9, 72);
+            this.companyDropDown.Name = "companyDropDown";
+            this.companyDropDown.Size = new System.Drawing.Size(121, 26);
+            this.companyDropDown.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 18);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Filter by Company:";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(801, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Apply";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(642, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(160, 23);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Application Due Date";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(483, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Majors Accepted";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(324, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Job Type";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(165, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Job Name";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // schoolTab
             // 
             this.schoolTab.BackColor = System.Drawing.SystemColors.Control;
@@ -145,102 +223,33 @@
             this.schoolTab.TabIndex = 1;
             this.schoolTab.Text = "Popular Schools";
             // 
-            // candidatesTab
+            // label23
             // 
-            this.candidatesTab.BackColor = System.Drawing.SystemColors.Control;
-            this.candidatesTab.Controls.Add(this.label24);
-            this.candidatesTab.Controls.Add(this.candidateDropDown);
-            this.candidatesTab.Controls.Add(this.label6);
-            this.candidatesTab.Controls.Add(this.label13);
-            this.candidatesTab.Controls.Add(this.label14);
-            this.candidatesTab.Controls.Add(this.label15);
-            this.candidatesTab.Controls.Add(this.label16);
-            this.candidatesTab.Controls.Add(this.label17);
-            this.candidatesTab.Controls.Add(this.candidateTable);
-            this.candidatesTab.Location = new System.Drawing.Point(4, 25);
-            this.candidatesTab.Name = "candidatesTab";
-            this.candidatesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.candidatesTab.Size = new System.Drawing.Size(914, 375);
-            this.candidatesTab.TabIndex = 2;
-            this.candidatesTab.Text = "Best Candidates";
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(17, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(131, 54);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Where are your peers applying?";
             // 
-            // salaryTab
+            // schoolDropDown
             // 
-            this.salaryTab.BackColor = System.Drawing.SystemColors.Control;
-            this.salaryTab.Controls.Add(this.label25);
-            this.salaryTab.Controls.Add(this.salaryDropDown);
-            this.salaryTab.Controls.Add(this.label18);
-            this.salaryTab.Controls.Add(this.label19);
-            this.salaryTab.Controls.Add(this.label20);
-            this.salaryTab.Controls.Add(this.label21);
-            this.salaryTab.Controls.Add(this.label22);
-            this.salaryTab.Controls.Add(this.salaryTable);
-            this.salaryTab.Location = new System.Drawing.Point(4, 25);
-            this.salaryTab.Name = "salaryTab";
-            this.salaryTab.Padding = new System.Windows.Forms.Padding(3);
-            this.salaryTab.Size = new System.Drawing.Size(914, 375);
-            this.salaryTab.TabIndex = 3;
-            this.salaryTab.Text = "Best Salaries";
+            this.schoolDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.schoolDropDown.FormattingEnabled = true;
+            this.schoolDropDown.Location = new System.Drawing.Point(20, 125);
+            this.schoolDropDown.Name = "schoolDropDown";
+            this.schoolDropDown.Size = new System.Drawing.Size(121, 26);
+            this.schoolDropDown.TabIndex = 13;
             // 
-            // label1
+            // label12
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Job Name";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(324, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Job Type";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(483, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Majors Accepted";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(642, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Application Due Date";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(801, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Apply";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(17, 95);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 18);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Filter by Company:";
             // 
             // label7
             // 
@@ -313,43 +322,33 @@
             this.schoolTable.Size = new System.Drawing.Size(707, 323);
             this.schoolTable.TabIndex = 6;
             // 
-            // label11
+            // candidatesTab
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 18);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Filter by Company:";
+            this.candidatesTab.BackColor = System.Drawing.SystemColors.Control;
+            this.candidatesTab.Controls.Add(this.label24);
+            this.candidatesTab.Controls.Add(this.candidateDropDown);
+            this.candidatesTab.Controls.Add(this.label6);
+            this.candidatesTab.Controls.Add(this.label13);
+            this.candidatesTab.Controls.Add(this.label14);
+            this.candidatesTab.Controls.Add(this.label15);
+            this.candidatesTab.Controls.Add(this.label16);
+            this.candidatesTab.Controls.Add(this.label17);
+            this.candidatesTab.Controls.Add(this.candidateTable);
+            this.candidatesTab.Location = new System.Drawing.Point(4, 25);
+            this.candidatesTab.Name = "candidatesTab";
+            this.candidatesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.candidatesTab.Size = new System.Drawing.Size(914, 375);
+            this.candidatesTab.TabIndex = 2;
+            this.candidatesTab.Text = "Best Candidates";
             // 
-            // companyDropDown
+            // label24
             // 
-            this.companyDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companyDropDown.FormattingEnabled = true;
-            this.companyDropDown.Location = new System.Drawing.Point(9, 72);
-            this.companyDropDown.Name = "companyDropDown";
-            this.companyDropDown.Size = new System.Drawing.Size(121, 26);
-            this.companyDropDown.TabIndex = 7;
-            // 
-            // schoolDropDown
-            // 
-            this.schoolDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schoolDropDown.FormattingEnabled = true;
-            this.schoolDropDown.Location = new System.Drawing.Point(20, 125);
-            this.schoolDropDown.Name = "schoolDropDown";
-            this.schoolDropDown.Size = new System.Drawing.Size(121, 26);
-            this.schoolDropDown.TabIndex = 13;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(17, 95);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 18);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Filter by Company:";
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(24, 14);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(131, 54);
+            this.label24.TabIndex = 16;
+            this.label24.Text = "Based off GPA and Major, find the best fit for the job.";
             // 
             // candidateDropDown
             // 
@@ -453,6 +452,33 @@
             this.candidateTable.Size = new System.Drawing.Size(707, 323);
             this.candidateTable.TabIndex = 8;
             // 
+            // salaryTab
+            // 
+            this.salaryTab.BackColor = System.Drawing.SystemColors.Control;
+            this.salaryTab.Controls.Add(this.label25);
+            this.salaryTab.Controls.Add(this.salaryDropDown);
+            this.salaryTab.Controls.Add(this.label18);
+            this.salaryTab.Controls.Add(this.label19);
+            this.salaryTab.Controls.Add(this.label20);
+            this.salaryTab.Controls.Add(this.label21);
+            this.salaryTab.Controls.Add(this.label22);
+            this.salaryTab.Controls.Add(this.salaryTable);
+            this.salaryTab.Location = new System.Drawing.Point(4, 25);
+            this.salaryTab.Name = "salaryTab";
+            this.salaryTab.Padding = new System.Windows.Forms.Padding(3);
+            this.salaryTab.Size = new System.Drawing.Size(914, 375);
+            this.salaryTab.TabIndex = 3;
+            this.salaryTab.Text = "Best Salaries";
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(23, 14);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(131, 75);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "Find what company is paying your major the most!";
+            // 
             // salaryDropDown
             // 
             this.salaryDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -543,49 +569,11 @@
             this.salaryTable.Size = new System.Drawing.Size(707, 323);
             this.salaryTable.TabIndex = 14;
             // 
-            // homeButton
-            // 
-            this.homeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeButton.Location = new System.Drawing.Point(425, 422);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(80, 25);
-            this.homeButton.TabIndex = 2;
-            this.homeButton.Text = "Home";
-            this.homeButton.UseVisualStyleBackColor = true;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(17, 17);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(131, 54);
-            this.label23.TabIndex = 14;
-            this.label23.Text = "Where are your peers applying?";
-            // 
-            // label24
-            // 
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(24, 14);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(131, 54);
-            this.label24.TabIndex = 16;
-            this.label24.Text = "Based off GPA and Major, find the best fit for the job.";
-            // 
-            // label25
-            // 
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(23, 14);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(131, 75);
-            this.label25.TabIndex = 21;
-            this.label25.Text = "Find what company is paying your major the most!";
-            // 
             // displayPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 453);
-            this.Controls.Add(this.homeButton);
             this.Controls.Add(this.tableTabs);
             this.Name = "displayPage";
             this.Text = "Find A Job";
@@ -639,7 +627,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TableLayoutPanel salaryTable;
-        private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;

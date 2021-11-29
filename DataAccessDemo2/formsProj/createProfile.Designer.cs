@@ -49,8 +49,9 @@
             this.majorDropDown = new System.Windows.Forms.ComboBox();
             this.gpaBox = new System.Windows.Forms.TextBox();
             this.collegeDropDown = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.graduated = new System.Windows.Forms.CheckBox();
             this.gpaError = new System.Windows.Forms.Label();
+            this.fieldError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -250,13 +251,13 @@
             this.collegeDropDown.Size = new System.Drawing.Size(250, 26);
             this.collegeDropDown.TabIndex = 20;
             // 
-            // checkBox1
+            // graduated
             // 
-            this.checkBox1.Location = new System.Drawing.Point(167, 227);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(25, 25);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.graduated.Location = new System.Drawing.Point(167, 227);
+            this.graduated.Name = "graduated";
+            this.graduated.Size = new System.Drawing.Size(25, 25);
+            this.graduated.TabIndex = 25;
+            this.graduated.UseVisualStyleBackColor = true;
             // 
             // gpaError
             // 
@@ -269,13 +270,25 @@
             this.gpaError.TabIndex = 26;
             this.gpaError.Text = "*Must be between 1.0 and 4.0";
             // 
+            // fieldError
+            // 
+            this.fieldError.AutoSize = true;
+            this.fieldError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fieldError.ForeColor = System.Drawing.SystemColors.Control;
+            this.fieldError.Location = new System.Drawing.Point(371, 579);
+            this.fieldError.Name = "fieldError";
+            this.fieldError.Size = new System.Drawing.Size(149, 18);
+            this.fieldError.TabIndex = 27;
+            this.fieldError.Text = "*All fields are required";
+            // 
             // createProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 603);
+            this.Controls.Add(this.fieldError);
             this.Controls.Add(this.gpaError);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.graduated);
             this.Controls.Add(this.collegeDropDown);
             this.Controls.Add(this.gpaBox);
             this.Controls.Add(this.majorDropDown);
@@ -327,7 +340,8 @@
         private System.Windows.Forms.ComboBox majorDropDown;
         private System.Windows.Forms.TextBox gpaBox;
         private System.Windows.Forms.ComboBox collegeDropDown;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox graduated;
         private System.Windows.Forms.Label gpaError;
+        private System.Windows.Forms.Label fieldError;
     }
 }

@@ -15,22 +15,23 @@ namespace FindAJob
         public addJob()
         {
             InitializeComponent();
-            string[] majors = {"Biomedical Engineering","Computer Science","Entrepreneurship", "Human Resources","Nursing", "Political Science", "Biology", "Chemistry","Food Science","Management Information Systems", "Mathematics",
-"Accounting", "Agricultural Sciences", "Civil Engineering", "Economics", "Industrial Engineering", "Computer Engineering", "Electrical Engineering", "Finance", "Business Administration"};
-            majorDropDown.Items.AddRange(majors);
-            string[] jobs = { "Seasonal", "Intern", "Part-Time", "Full-Time" };
-            jobType.Items.AddRange(jobs);
+            majorDropDown.Items.AddRange(objects.majors);
+            
+            jobType.Items.AddRange(objects.jobs);
             
         }
 
         private void addJobButton_Click(object sender, EventArgs e)
         {
-            
+            if (jobTitle != null && minSalary!=null && companyDropDown.SelectedIndex>-1 && supLastName!=null && jobType.SelectedIndex>-1 && majorDropDown.SelectedIndex > -1)
+            {
+                //PersonData.Models.Job j = new PersonData.Models.Job()
+            }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

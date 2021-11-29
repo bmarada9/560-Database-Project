@@ -15,6 +15,7 @@ namespace FindAJob
         public displayPage()
         {
             InitializeComponent();
+            salaryDropDown.Items.AddRange(objects.majors);
         }
     }
 }
