@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{E7E1
 		Scripts\DropDatabase.ps1 = Scripts\DropDatabase.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAJob", "..\formsProj\FindAJob.csproj", "{9480E854-1CF9-470F-8B54-2A1B39D6DBBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5912C4F2-7B16-4D80-9EF1-34DF9073421F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5912C4F2-7B16-4D80-9EF1-34DF9073421F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5912C4F2-7B16-4D80-9EF1-34DF9073421F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9480E854-1CF9-470F-8B54-2A1B39D6DBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9480E854-1CF9-470F-8B54-2A1B39D6DBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9480E854-1CF9-470F-8B54-2A1B39D6DBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9480E854-1CF9-470F-8B54-2A1B39D6DBBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
