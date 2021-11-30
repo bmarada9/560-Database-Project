@@ -1,3 +1,18 @@
 # 560-Database-Project
-We working on SHIT!!!
-We basically fallowed the structure of the demo project. The SQL is in the Project file. Procedures is the file that contains the report quaries, the tables is where we declared the tables, and the Sechma folder is where the Sechma is located to creating the tables is located in. 
+Populated Tables are included in Table Data outside of the VS Solution.
+While the Table files are in DataAccessDemo2/sqlProj/PersonData, the SQL and Procedures are in the same project.
+In DataAccessDemo2/formProj the WindowsForm are contained and it is what runs when the VS Solution is run.
+The powershell file is in the DataAccessDemo2 folder.
+
+DataAcessDemo2/formProj
+-- Contains all WindowsForms and their programs
+DataAccessDemo2/sqlProj
+-- /DataAccess
+   Contains all interfaces and wrappers for the Delegates
+-- /PersonData/DataDelegates
+   Contains delegates for the Report Queries and all Inserts
+-- /PersonData/Models
+   Contains the objects for each Table and its variable
+-- /PersonData/Sql
+   Contains all SQL queries
+   
