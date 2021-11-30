@@ -14,7 +14,7 @@ namespace PersonData.Models
       public bool Graduated { get; }
 
       public Application(int appId, int jobId, int personId, DateTime date, DateTime dueDate,
-       int gpa, string major, bool graduated)
+       double gpa, string major, bool graduated)
       {
          AppID = appId;
          JobID = jobId;
