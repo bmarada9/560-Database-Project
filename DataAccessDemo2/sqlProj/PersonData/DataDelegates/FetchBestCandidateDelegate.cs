@@ -32,6 +32,7 @@ namespace PersonData.DataDelegates
              reader.GetInt32("PersonId"),
              reader.GetString("FirstName"),
              reader.GetString("LastName"),
+             reader.GetValue<double>("GPA"),
              reader.GetString("Email"),
              reader.GetString("Major"),
              reader.Equals("Grad"),

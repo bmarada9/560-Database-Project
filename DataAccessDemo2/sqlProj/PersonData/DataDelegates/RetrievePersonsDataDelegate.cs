@@ -22,13 +22,14 @@ namespace PersonData.DataDelegates
                    reader.GetInt32("PersonId"),
                    reader.GetString("FirstName"),
                    reader.GetString("LastName"),
+                   reader.GetValue<double>("gpa"),
                    reader.GetString("Email"),
                    reader.GetString("Major"),
                    reader.Equals("Grad"),
                    reader.GetString("phoneNum"),
                    reader.GetInt32("schoolID"),
                    reader.GetInt32("salary"),
-                   reader.GetString("comments")));
+                   reader.GetString("Comments")));
          }
 
          return persons;
