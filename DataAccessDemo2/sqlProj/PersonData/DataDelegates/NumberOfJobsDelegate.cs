@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace PersonData.DataDelegates
 {
-   internal class NumberOfJobsDelegate : DataReaderDelegate<Job>
+   public class NumberOfJobsDelegate : DataReaderDelegate<Job>
    {
       private readonly string CompName;
 

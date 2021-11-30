@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace PersonData.DataDelegates
 {
-   internal class FetchMostPopularSchoolDelegate : DataReaderDelegate<School>
+   public class FetchMostPopularSchoolDelegate : DataReaderDelegate<School>
    {
       private readonly string companyName;
 

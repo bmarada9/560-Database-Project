@@ -1,6 +1,6 @@
 Param(
    [string] $Server = "mssql.cs.ksu.edu",
-   [string] $Database = "cherrera543"
+   [string] $Database = "chererra543; userId = cherrera543; password = burntbook177419;"
 )
 
 # This script requires the SQL Server module for PowerShell.

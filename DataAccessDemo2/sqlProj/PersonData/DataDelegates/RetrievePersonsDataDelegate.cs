@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace PersonData.DataDelegates
 {
-   internal class RetrievePersonsDataDelegate : DataReaderDelegate<IReadOnlyList<Person>>
+   public class RetrievePersonsDataDelegate : DataReaderDelegate<IReadOnlyList<Person>>
    {
       public RetrievePersonsDataDelegate()
          : base("Person.RetrievePersons")

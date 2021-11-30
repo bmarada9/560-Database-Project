@@ -57,16 +57,20 @@ namespace FindAJob
             switch (tab)
             {
                 case 1:
-                    //By Company
+                    //By Company aka NumberofJobs
+                    PersonData.DataDelegates.NumberOfJobsDelegate nj = new PersonData.DataDelegates.NumberOfJobsDelegate(filter);
                     break;
                 case 2:
                     //Popular Schools
+                    PersonData.DataDelegates.FetchMostPopularSchoolDelegate fm = new PersonData.DataDelegates.FetchMostPopularSchoolDelegate(filter);
                     break;
                 case 3:
-                    //Best Candidates
+                    //Best Candidates aka Candidates
+                    PersonData.DataDelegates.FetchBestCandidateDelegate fb = new PersonData.DataDelegates.FetchBestCandidateDelegate(filter);
                     break;
                 case 4:
-                    //Best Salaries
+                    //Best Salaries aka ListofJobs
+                    PersonData.DataDelegates.FetchCompanyAndSalaryDelegate fc = new PersonData.DataDelegates.FetchCompanyAndSalaryDelegate(filter);
                     break;
             }
         }
