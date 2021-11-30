@@ -9,7 +9,7 @@ namespace PersonData.Models
       public int PersonID { get; }
       public DateTime DateApply { get; }
       public DateTime AppDueDate { get; }
-      public int GPA { get; }
+      public double GPA { get; }
       public string Major { get; }
       public bool Graduated { get; }
 

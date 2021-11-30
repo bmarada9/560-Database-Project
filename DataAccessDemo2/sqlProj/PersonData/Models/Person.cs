@@ -7,6 +7,7 @@ namespace PersonData.Models
       public int PersonId { get; }
       public string FirstName { get; }
       public string LastName { get; }
+      public double Gpa { get; }
       public string Email { get; }
       public string Major { get; }
       public bool Graduated { get; }
@@ -15,12 +16,13 @@ namespace PersonData.Models
       public int ExpSalary { get; }
       public string Comments { get; }
 
-      public Person(int personId, string firstName, string lastName, string email, string major,
+      public Person(int personId, string firstName, string lastName, double gpa, string email, string major,
        bool grad, string phoneNum, int schoolID, int salary, string comments)
       {
          PersonId = personId;
          FirstName = firstName;
          LastName = lastName;
+            Gpa = gpa;
          Email = email;
          Major = major;
          Graduated = grad;

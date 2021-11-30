@@ -44,6 +44,7 @@
             this.majorDropDown = new System.Windows.Forms.ListBox();
             this.addJobButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.fieldError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -198,11 +199,23 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // fieldError
+            // 
+            this.fieldError.AutoSize = true;
+            this.fieldError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fieldError.ForeColor = System.Drawing.SystemColors.Control;
+            this.fieldError.Location = new System.Drawing.Point(359, 576);
+            this.fieldError.Name = "fieldError";
+            this.fieldError.Size = new System.Drawing.Size(161, 18);
+            this.fieldError.TabIndex = 17;
+            this.fieldError.Text = "*All Fields Are Required";
+            // 
             // addJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 603);
+            this.Controls.Add(this.fieldError);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addJobButton);
             this.Controls.Add(this.majorDropDown);
@@ -244,5 +257,6 @@
         private System.Windows.Forms.ListBox majorDropDown;
         private System.Windows.Forms.Button addJobButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Label fieldError;
     }
 }

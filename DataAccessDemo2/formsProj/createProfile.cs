@@ -30,7 +30,8 @@ namespace FindAJob
                 if (firstName != null && lastName != null && email != null && email != null && majorDropDown.SelectedIndex > -1 && phoneNumber != null && expectedSalary != null) {
                     string salary = new String(expectedSalary.Text.Where(Char.IsDigit).ToArray());
                     int intsalary = Convert.ToInt32(salary);
-                    PersonData.Models.Person p = new PersonData.Models.Person(generatePersonID(), firstName.Text, lastName.Text, email.Text, majorDropDown.SelectedItem.ToString(), graduated.Checked, phoneNumber.Text, 0000, intsalary, commentBox.Text);
+                    PersonData.Models.Person p = new PersonData.Models.Person(generatePersonID(), firstName.Text, lastName.Text, Convert.ToDouble(gpaBox.Text),email.Text, majorDropDown.SelectedItem.ToString(), graduated.Checked, phoneNumber.Text, findSchoolID(collegeDropDown.SelectedItem.ToString()), intsalary, commentBox.Text);
+                    
                     Form1.createPerson(p);
                     this.Close();
                 }
@@ -52,6 +53,18 @@ namespace FindAJob
             int _max = 9999;
             Random _rdm = new Random();
             return _rdm.Next(_min, _max);
+        }
+        private int findSchoolID(string name)
+        {
+            int index = 0;
+            for (int i = 0; i < objects.schools.Length; i++)
+            {
+                if (objects.schools[i].Equals(name))
+                {
+                    index = i;
+                }
+            }
+            return objects.schoolId[index];
         }
     }
 }
