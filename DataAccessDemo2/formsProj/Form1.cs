@@ -44,11 +44,13 @@ namespace FindAJob
         {
             created = true;
             mainPerson = p;
+            PersonData.DataDelegates.CreatePersonDelegate per = new PersonData.DataDelegates.CreatePersonDelegate(p);
+
         }
 
         public static void createJob(PersonData.Models.Job j )
         {
-
+            PersonData.DataDelegates.CreateJobDelegate jo = new PersonData.DataDelegates.CreateJobDelegate(j);
         }
 
         public static void reportQuery(int tab, string filter)
