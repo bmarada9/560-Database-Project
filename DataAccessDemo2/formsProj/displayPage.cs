@@ -71,6 +71,41 @@ namespace FindAJob
                 Form1.mainPerson.Graduated
                 );
         }
+        public void companyDisplay(List<PersonData.Models.Job> jobs)
+        {
+            for(int i =0; i < jobs.Count; i++)
+            {
+                Label jname = new Label();
+                jname.Text = jobs[i].Name;
+                companyTable.Controls.Add(jname, 0, i);
+
+                Label jtype = new Label();
+                jtype.Text = jobs[i].JobType;
+                companyTable.Controls.Add(jtype, 1, i);
+
+                Label jmajor = new Label();
+                jmajor.Text = jobs[i].MajorAccepted;
+                companyTable.Controls.Add(jmajor, 2, i);
+
+                Label jduedate = new Label();
+                jduedate.Text = jobs[i].ApplicationDueDate;
+                companyTable.Controls.Add(jduedate,3,i);
+            }
+            
+        }
+
+        public void schoolDisplay(List<PersonData.Models.Person> persons)
+        {
+
+        }
+        public void candidateDisplay(List<PersonData.Models.Person> persons)
+        {
+
+        }
+        public void salaryDisplay(List<PersonData.Models.Job> jobs)
+        {
+
+        }
         
     }
 }

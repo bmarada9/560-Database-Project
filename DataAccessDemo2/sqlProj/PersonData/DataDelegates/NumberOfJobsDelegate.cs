@@ -36,7 +36,8 @@ namespace PersonData.DataDelegates
                 reader.GetString("MajorAccepted"),
                 reader.GetString("SupervisorLastName"),
                 reader.GetString("JobType"),
-                reader.GetInt32("MaximumSalary"));
+                reader.GetInt32("MaximumSalary"),
+                reader.GetString("ApplicationDueDate"));
 
         }
     }

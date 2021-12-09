@@ -78,5 +78,13 @@
     <Content Include="Sql\Tables\dbo.School.sql" />
     <Content Include="Sql\Tables\DropTables.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CIS 560 Project Tables - Application .csv" />
+    <None Include="CIS 560 Project Tables - Company.csv" />
+    <None Include="CIS 560 Project Tables - Degree.csv" />
+    <None Include="CIS 560 Project Tables - Job.csv" />
+    <None Include="CIS 560 Project Tables - Person.csv" />
+    <None Include="CIS 560 Project Tables - School.csv" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,9 +13,11 @@ namespace PersonData.Models
       public string JobType { get; }
         public int MaximumSalary { get; }
 
+        public string ApplicationDueDate { get; }
+
 
       public Job(string name, int minSalary, int companyId, int jobId, string majorAccpeted,
-       string supervisorName, string type, int maxsalary)
+       string supervisorName, string type, int maxsalary,string appduedate)
       {
          Name = name;
          MinimumSalary = minSalary;
@@ -25,6 +27,7 @@ namespace PersonData.Models
          SupervisorLastName = supervisorName;
          JobType = type;
             MaximumSalary = maxsalary;
+            ApplicationDueDate = appduedate;
       }
    }
 }

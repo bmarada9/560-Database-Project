@@ -1,0 +1,101 @@
+Name,SchoolID,Size,City,State,GraduateRate,Mascot,TypeOfSchool,YearlyAvgTuitionInState,YearlyAvgTuitionOutState
+Cruz College,1347,52750,Criciúma,Gilgit Baltistan,72,Yaks,0,9503,16630
+Munoz University,3727,48388,Carmen de Bolivar,Lubelskie,78,Monkey,1,10171,17799
+Delaney University,6424,72493,Biesme-sous-Thuin,Illinois,52,Chameleon,1,6139,10743
+Vazquez College,1640,89014,Saint Petersburg,Jönköpings län,73,Shark,0,14271,24974
+Joyner University,9988,65537,Le Petit-Quevilly,Nariño,74,Hyenas,0,12699,22223
+Watts University,4965,56652,Aizwal,Diyarbakır,64,Baboons,1,13129,22976
+Grimes University,5086,21960,Słupsk,Luxemburg,59,Crabs,1,10432,18256
+Reynolds College,5688,9270,San Pietro al Tanagro,Lombardia,89,Narwhals,0,8565,14989
+Perez College,1381,13451,Boryeong,Arica y Parinacota,66,Jackals,0,8082,14144
+Wolf College,5865,72340,Shaheed Benazirabad,Punjab,78,Crocodile,1,5044,8827
+Brooks College,3575,19415,Güstrow,Castilla - La Mancha,75,Monkey,0,14173,24803
+Gutierrez College,5285,72391,Portland,Dalarnas län,52,Tiger,1,14717,25755
+Hahn College,1787,7359,Whyalla,Mexico City,95,Lion,1,13554,23720
+Graham College,8079,97149,Arauco,Hamburg,91,Ocelot,0,12157,21275
+Haynes University,1510,30641,Chatillon,Munster,79,Alligator,0,11726,20521
+Castillo University,6006,52954,Vigo,Ontario,93,Crocodile,0,9261,16207
+Madden College,2925,54811,Stroud,Bahia,96,Crocodile,1,8559,14978
+Bowers College,2102,17893,Panjim,Schleswig-Holstein,71,Zebra,0,9328,16324
+Holmes College,6929,48076,Cairns,La Libertad,56,Dog,1,12466,21816
+Fuller College,7243,36133,Cajamarca,Queensland,77,Cat,0,5264,9212
+Raymond University,8734,59156,Iquitos,Wigtownshire,58,Foxes,1,11212,19621
+Carter College,9022,52132,Pazarcık,Maule,79,Anteater,1,10265,17964
+Stone College,9269,73331,Dole,Utah,93,Chipmunks,0,5826,10196
+Stanley College,9967,93217,Kawerau,Munster,99,Cows,1,12380,21665
+Shelton University,8307,45438,Kirov,Burgenland,97,Whale,1,9438,16517
+Downs University,4921,80068,Şereflikoçhisar,Piemonte,84,Anteater,0,14958,26177
+Randolph University,6410,50927,Bursa,Colorado,53,Whale,0,7316,12803
+Bradshaw College,3909,60483,Windermere,Berlin,83,Cat,0,8752,15316
+Cox University,1900,8247,Gilgit,Azad Kashmir,52,Bats,0,5452,9541
+Williamson College,5449,11355,Bollnäs,Jharkhand,98,Snakes,1,6130,10728
+Mitchell University,9539,74870,Wonju,Antioquia,82,Lion,0,9849,17236
+Frye University,4813,26588,Suncheon,Ulster,69,Chameleon,1,9730,17028
+Albert University,4027,19553,San Cristóbal de la Laguna,Bursa,61,Narwhals,1,10853,18993
+Underwood University,3397,63281,Bastia,Zachodniopomorskie,81,Yaks,1,6777,11860
+Walter College,3326,59954,Söderhamn,Stockholms län,81,Cows,1,9352,16366
+Lester University,2978,65759,Novosibirsk,Connacht,69,Lion,1,9648,16884
+Schroeder College,2302,53380,Baracaldo,Aisén,98,Chipmunks,1,12978,22712
+Allen College,2930,11173,Biên Hòa,Coquimbo,52,Baboons,0,10092,17661
+Spears University,3041,62049,Magadan,Berlin,69,Lion,0,6129,10726
+Livingston University,1122,52605,Palma de Mallorca,Oost-Vlaanderen,86,Cat,1,6446,11281
+Becker University,2915,69112,Avesta,Gävleborgs län,90,Narwhals,1,8734,15285
+Harrison University,6867,61681,Tarma,Uttar Pradesh,51,Alligator,0,5250,9188
+Harvey University,6455,25423,Kielce,Ogun,76,Anteater,1,10264,17962
+Velasquez University,1382,70775,Colwood,Podkarpackie,67,Crabs,1,11141,19497
+Bauer University,8510,97828,Pazarcık,Lagos,56,Lion,0,10779,18863
+Erickson College,8692,95871,Fort Wayne,Volgograd Oblast,58,Foxes,1,10905,19084
+Duran College,1929,42703,Bama,Kogi,62,Chameleon,1,6438,11267
+Miller University,4355,86331,Puerto Vallarta,South Island,64,Whale,0,10232,17906
+Mcdaniel University,9938,79922,Camaçari,Lancashire,87,Crabs,1,9265,16214
+Russell University,6320,46530,Sandviken,Ceuta,56,Yaks,0,5642,9874
+Blair College,3307,70258,Boryeong,Trentino-Alto Adige,88,Jackals,1,6839,11968
+Robertson College,3364,46314,Bostaniçi,Yên Bái,81,Chipmunks,1,9380,16415
+Reynolds College,7032,44563,Helmond,Basilicata,72,Baboons,0,8196,14343
+Davenport University,5587,81945,Quemchi,Tamaulipas,63,Yaks,1,5212,9121
+Delacruz University,1805,5323,Lower Hutt,Kaliningrad Oblast,53,Monkey,1,13911,24344
+Ross University,7454,24696,Logroño,Extremadura,66,Jackals,0,8588,15029
+Vance College,3583,98560,Juárez,Waals-Brabant,81,Cat,0,12784,22372
+Palmer College,8050,70168,Saint Petersburg,Lubuskie,57,Cows,0,6789,11881
+Rocha University,9582,71777,Los Álamos,Basse-Normandie,94,Snakes,0,13007,22762
+Valentine University,1498,99035,Zaria,Heredia,98,Warthog,1,11097,19420
+Hurley University,6278,19283,Yên Châu,Shropshire,77,Snakes,0,7399,12948
+Lucas University,7375,13684,Galway,Sląskie,63,Foxes,1,5559,9728
+Gomez College,7453,93994,North Shore,Loreto,84,Zebra,1,7069,12371
+Mercado University,6628,9721,Hafizabad,Cumberland,78,Crabs,0,6289,11006
+Todd College,2001,76005,Itanagar,Calabria,93,Anteater,1,7789,13631
+Steele University,3416,12455,Crieff,Vienna,58,Ocelot,1,8230,14403
+Workman College,2288,15935,Galway,North Gyeongsang,54,Monkey,1,5016,8778
+Rush College,3257,6444,Teruel,Saskatchewan,92,Anteater,1,6250,10938
+Crosby College,4170,65424,San José de Alajuela,Bourgogne,52,Alligator,1,9687,16952
+Galloway College,4650,84142,Panjim,Oxfordshire,58,Anteater,0,7513,13148
+Burton University,1835,90401,Piura,Niger,82,Warthog,0,8048,14084
+Collins University,2489,88280,Río Ibáñez,Namen,86,Crabs,0,13559,23728
+Whitney College,1989,52120,Quảng Ngãi,British Columbia,55,Chipmunks,0,9869,17271
+Maynard College,3689,80454,Palembang,Maryland,55,Cows,1,14625,25594
+Rice University,6226,99325,Gdynia,Östergötlands län,61,Chameleon,1,14090,24658
+Carroll University,3141,8928,Pontypridd,Vorarlberg,65,Cows,0,10414,18225
+Sosa College,4494,13237,Argyle,Samsun,66,Shark,1,5861,10257
+Atkins University,4165,40797,Kapfenberg,Punjab,56,Crabs,0,11371,19899
+Schneider College,4376,78154,Queenstown,Northwest Territories,78,Yaks,0,10480,18340
+Howell University,6584,62001,Mazatlán,Gyeonggi,82,Dog,0,9307,16287
+Underwood College,3338,62865,Dallas,Balochistan,91,Lion,1,9372,16401
+Rivera College,6319,41947,Akhisar,Antofagasta,54,Tiger,0,12084,21147
+Juarez College,9822,64177,Bannu,Warmińsko-mazurskie,71,Anteater,0,6195,10841
+Ellis University,6035,70423,Leersum,Burgenland,78,Ocelot,0,7580,13265
+Banks College,5456,55513,Guápiles,Los Ríos,77,Crabs,1,7107,12437
+Kim University,6541,80702,Tarma,Samsun,63,Monkey,1,8672,15176
+Gilliam University,2390,46901,Suwałki,Ceará,63,Crocodile,0,6155,10771
+Sutton University,4411,18268,Dublin,Berwickshire,57,Ocelot,0,13760,24080
+Spencer College,6896,24563,Jayapura,Puglia,74,Anteater,1,13557,23725
+Miles University,8683,19500,Arica,Bắc Kạn,59,Cat,1,10094,17665
+Morin University,9105,52935,Soissons,Leinster,92,Lion,1,9098,15922
+Berg University,9054,48141,Jaén,Mazowieckie,55,Snakes,1,11554,20220
+Sloan College,6366,7215,Barranca,South Chungcheong,57,Cows,1,7565,13239
+Frazier College,2911,5271,Kirkwall,Gelderland,53,Jackals,1,10656,18648
+Fisher University,5245,6794,Cape Breton Island,Carinthia,51,Warthog,0,5315,9301
+Knox University,3100,20645,Çaldıran,Bremen,52,Cat,1,5834,10210
+Coffey University,2500,21088,Yeosu,Morelos,98,Baboons,1,9895,17316
+Bentley University,2688,92330,Siquirres,North Island,99,Chameleon,1,7643,13375
+Vaughn College,4825,45150,Kędzierzyn-Koźle,Adana,65,Ocelot,1,5810,10168
+Dixon College,4438,92709,Paredones,New South Wales,91,Snakes,1,11166,19541

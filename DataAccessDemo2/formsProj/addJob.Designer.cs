@@ -40,7 +40,7 @@
             this.supLastName = new System.Windows.Forms.TextBox();
             this.companyDropDown = new System.Windows.Forms.ComboBox();
             this.jobType = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.appDate = new System.Windows.Forms.DateTimePicker();
             this.majorDropDown = new System.Windows.Forms.ListBox();
             this.addJobButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -159,13 +159,13 @@
             this.jobType.Size = new System.Drawing.Size(230, 26);
             this.jobType.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // appDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(199, 326);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(230, 24);
-            this.dateTimePicker1.TabIndex = 12;
+            this.appDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appDate.Location = new System.Drawing.Point(199, 326);
+            this.appDate.Name = "appDate";
+            this.appDate.Size = new System.Drawing.Size(230, 24);
+            this.appDate.TabIndex = 12;
             // 
             // majorDropDown
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addJobButton);
             this.Controls.Add(this.majorDropDown);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.appDate);
             this.Controls.Add(this.jobType);
             this.Controls.Add(this.companyDropDown);
             this.Controls.Add(this.supLastName);
@@ -253,7 +253,7 @@
         private System.Windows.Forms.TextBox supLastName;
         private System.Windows.Forms.ComboBox companyDropDown;
         private System.Windows.Forms.ComboBox jobType;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker appDate;
         private System.Windows.Forms.ListBox majorDropDown;
         private System.Windows.Forms.Button addJobButton;
         private System.Windows.Forms.Button cancelButton;

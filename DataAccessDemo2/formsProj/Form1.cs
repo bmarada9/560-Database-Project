@@ -16,9 +16,17 @@ namespace FindAJob
     {
         public static bool created = false;
         public static PersonData.Models.Person mainPerson;
+        public static displayPage display;
+        //table of jobs
+        //table of people
         public Form1()
         {
             InitializeComponent();
+           
+            //read in CSV for jobs
+            //read in CSV for people
+
+            
         }
 
         private void createProfile_Click(object sender, EventArgs e)
@@ -31,12 +39,13 @@ namespace FindAJob
         {
             addJob aj = new addJob();
             aj.Show();
+            
         }
 
 
         private void currentJobsButton_Click(object sender, EventArgs e)
         {
-            displayPage display = new displayPage();
+            display = new displayPage();
             display.Show();
         }
 
@@ -45,12 +54,13 @@ namespace FindAJob
             created = true;
             mainPerson = p;
             PersonData.DataDelegates.CreatePersonDelegate per = new PersonData.DataDelegates.CreatePersonDelegate(p.PersonId,p.FirstName,p.LastName,p.Gpa,p.Email,p.Major,p.Graduated,p.PhoneNum,p.SchoolID,p.ExpSalary,p.Comments);
-
+            //add person to table
         }
 
         public static void createJob(PersonData.Models.Job j )
         {
-            PersonData.DataDelegates.CreateJobDelegate jo = new PersonData.DataDelegates.CreateJobDelegate(j.Name,j.MinimumSalary,j.CompanyID,j.JobID,j.MajorAccepted,j.SupervisorLastName,j.JobType,j.MaximumSalary);
+            PersonData.DataDelegates.CreateJobDelegate jo = new PersonData.DataDelegates.CreateJobDelegate(j.Name,j.MinimumSalary,j.CompanyID,j.JobID,j.MajorAccepted,j.SupervisorLastName,j.JobType,j.MaximumSalary,j.ApplicationDueDate);
+            //add job to table
         }
 
         public static void reportQuery(int tab, string filter)
@@ -61,18 +71,27 @@ namespace FindAJob
                 case 1:
                     //By Company aka NumberofJobs
                     PersonData.DataDelegates.NumberOfJobsDelegate nj = new PersonData.DataDelegates.NumberOfJobsDelegate(filter);
+
+                    //new table
+                    //add jobs with company name ==
                     break;
                 case 2:
                     //Popular Schools
                     PersonData.DataDelegates.FetchMostPopularSchoolDelegate fm = new PersonData.DataDelegates.FetchMostPopularSchoolDelegate(filter);
+                    //new table
+                    //method for popular schools
                     break;
                 case 3:
                     //Best Candidates aka Candidates
                     PersonData.DataDelegates.FetchBestCandidateDelegate fb = new PersonData.DataDelegates.FetchBestCandidateDelegate(filter);
+                    //new table
+                    //add first person
                     break;
                 case 4:
                     //Best Salaries aka ListofJobs
                     PersonData.DataDelegates.FetchCompanyAndSalaryDelegate fc = new PersonData.DataDelegates.FetchCompanyAndSalaryDelegate(filter);
+                    //new table 
+                    //add first salary
                     break;
             }
         }
