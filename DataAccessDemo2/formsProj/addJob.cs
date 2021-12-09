@@ -27,7 +27,7 @@ namespace FindAJob
             {
                 string salary = new String(minSalary.Text.Where(Char.IsDigit).ToArray());
                 int intsalary = Convert.ToInt32(salary);
-                PersonData.Models.Job j = new PersonData.Models.Job(jobTitle.Text, intsalary, findCompanyId(companyDropDown.SelectedItem.ToString()), generateJobId(), majorDropDown.SelectedItem.ToString(), supLastName.Text, jobType.Text);
+                PersonData.Models.Job j = new PersonData.Models.Job(jobTitle.Text, intsalary, findCompanyId(companyDropDown.SelectedItem.ToString()), generateJobId(), majorDropDown.SelectedItem.ToString(), supLastName.Text, jobType.Text, intsalary);
                 Form1.createJob(j);
                 this.Close();
             }

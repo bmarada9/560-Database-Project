@@ -20,7 +20,7 @@ namespace PersonData.DataDelegates
         public readonly int maxSalary;
 
         public CreateJobDelegate(string name, int minSalary, int companyId, int jobId, string major,
-            string supervisorLastName, string jobType, DateTime appDueDate, int maxSalary)
+            string supervisorLastName, string jobType, int maxSalary)
 
            : base("Person.CreateJob")
         {
@@ -60,9 +60,6 @@ namespace PersonData.DataDelegates
         p = command.Parameters.Add("JobType", SqlDbType.NVarChar);
         p.Direction = ParameterDirection.Output;
 
-        p = command.Parameters.Add("AppDueDate", SqlDbType.DateTimeOffset);
-        p.Direction = ParameterDirection.Output;
-
         p = command.Parameters.Add("MaxSalary", SqlDbType.Int);
         p.Direction = ParameterDirection.Output;
 
@@ -70,7 +67,7 @@ namespace PersonData.DataDelegates
 
     public override Job Translate(SqlCommand command)
     {
-        return new Job(name, minSalary, (int)command.Parameters["CompanyId"].Value, jobId, major, supervisorLastName, jobType);
+        return new Job(name, minSalary,companyId, jobId, major,supervisorLastName,jobType, maxSalary);
     }
 }
 }

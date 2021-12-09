@@ -28,14 +28,15 @@ namespace PersonData.DataDelegates
           if (!reader.Read())
             throw new RecordNotFoundException(CompName);
 
-         return new Job(
-             reader.GetString("Name"),
-             reader.GetInt32("MinimumSalary"),
-             reader.GetInt32("CompanyID"),
-             reader.GetInt32("JobID"),
-             reader.GetString("MajorAccepted"),
-             reader.GetString("SupervisorLastName"),
-             reader.GetString("JobType"));
+            return new Job(
+                reader.GetString("Name"),
+                reader.GetInt32("MinimumSalary"),
+                reader.GetInt32("CompanyID"),
+                reader.GetInt32("JobID"),
+                reader.GetString("MajorAccepted"),
+                reader.GetString("SupervisorLastName"),
+                reader.GetString("JobType"),
+                reader.GetInt32("MaximumSalary"));
 
         }
     }

@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace PersonData.DataDelegates
 {
-    internal class CreatePersonDataDelegate : NonQueryDataDelegate<Person>
+    public class CreatePersonDelegate : NonQueryDataDelegate<Person>
     {
         public readonly int personId;
         public readonly string firstName;
@@ -14,13 +14,13 @@ namespace PersonData.DataDelegates
         public readonly string email;
         private readonly string major;
         public readonly bool graduate;
-        public readonly int phoneNum;
+        public readonly string phoneNum;
         private readonly int schoolId;
         public readonly int salary;
         public readonly string comments;
 
-        public CreatePersonDataDelegate(int personId, string firstName, string lastName, double gpa, string email, 
-            string major, bool graduate, int phoneNum, int schoolId, int salary, string comments)
+        public CreatePersonDelegate(int personId, string firstName, string lastName, double gpa, string email, 
+            string major, bool graduate, string phoneNum, int schoolId, int salary, string comments)
 
            : base("Person.CreatePerson")
         {
