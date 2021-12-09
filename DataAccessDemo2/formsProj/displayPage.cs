@@ -20,6 +20,10 @@ namespace FindAJob
             schoolDropDown.Items.AddRange(objects.companies);
             candidateDropDown.Items.AddRange(objects.companies);
             salaryDropDown.Items.AddRange(objects.majors);
+            if (Form1.created == true)
+            {
+                nameDisplay.Text = "Hello, " + Form1.mainPerson.FirstName;
+            }
 
         }
 
