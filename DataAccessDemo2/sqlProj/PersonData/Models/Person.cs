@@ -22,7 +22,7 @@ namespace PersonData.Models
          PersonId = personId;
          FirstName = firstName;
          LastName = lastName;
-            Gpa = gpa;
+         Gpa = gpa;
          Email = email;
          Major = major;
          Graduated = grad;

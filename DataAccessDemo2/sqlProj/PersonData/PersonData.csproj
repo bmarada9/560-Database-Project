@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDelegates\CreateJobDelegate.cs" />
+    <Compile Include="DataDelegates\CreatePersonDelegate.cs" />
     <Compile Include="DataDelegates\FetchBestCandidateDelegate.cs" />
     <Compile Include="DataDelegates\FetchCompanyAndSalaryDelegate.cs" />
     <Compile Include="DataDelegates\FetchMostPopularSchoolDelegate.cs" />

@@ -20,14 +20,14 @@ namespace PersonData.DataDelegates
         public readonly string comments;
 
         public CreatePersonDataDelegate(int personId, string firstName, string lastName, double gpa, string email, 
-            string major, bool graduate, int phoneNum, int schoolId, int salary, string comments;)
+            string major, bool graduate, int phoneNum, int schoolId, int salary, string comments)
 
            : base("Person.CreatePerson")
         {
             this.personId = personId;
             this.firstName = firstName;
             this.lastName = lastName;
-            this.gap = gpa; 
+            this.gpa = gpa; 
             this.email = email;
             this.major = major;
             this.graduate = graduate;
@@ -53,13 +53,13 @@ namespace PersonData.DataDelegates
             p = command.Parameters.Add("PersonID", SqlDbType.Int);
             p.Direction = ParameterDirection.Output;
 
-            p = command.Parameters.Add("GPA", SqlDbType.NUMERIC(3,2));
+            p = command.Parameters.Add("GPA", SqlDbType.Decimal);
             p.Direction = ParameterDirection.Output;
 
             p = command.Parameters.Add("Major", SqlDbType.NVarChar);
             p.Direction = ParameterDirection.Output;
 
-            p = command.Parameters.Add("Graduated", SqlDbType.BIT);
+            p = command.Parameters.Add("Graduated", SqlDbType.Bit);
             p.Direction = ParameterDirection.Output;
 
             p = command.Parameters.Add("PhoneNumber", SqlDbType.NVarChar);
@@ -80,7 +80,7 @@ namespace PersonData.DataDelegates
     public override Person Translate(SqlCommand command)
         {
             return new Person((int)command.Parameters["PersonId"].Value, firstName, lastName, gpa, email, major, 
-                graduate, phoneNum, schooId, salary, comments);
+                graduate, phoneNum.ToString(), schoolId, salary, comments);
         }
     }
 }

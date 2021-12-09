@@ -2,31 +2,33 @@ using PersonData.Models;
 using DataAccess;
 using System.Data;
 using System.Data.SqlClient;
+using System;
 
 namespace PersonData.DataDelegates
 {
-    internal class CreateJobDelegate : NonQueryDataDelegate<Job>
+    public class CreateJobDelegate : NonQueryDataDelegate<Job>
     {
+
         public readonly string name;
         private readonly int minSalary;
         public readonly int companyId;
         public readonly int jobId;
-        private readonly double gpa;
+        private readonly string major;
         public readonly string supervisorLastName;
         public readonly string jobType;
         private readonly DateTime appDueDate;
         public readonly int maxSalary;
 
-        public CreatePersonDataDelegate(string name, int minSalary, int companyId, int jobId, double gpa,
-            string supervisorLastName, string jobType, DateTime appDueDate, int maxSalary;)
+        public CreateJobDelegate(string name, int minSalary, int companyId, int jobId, string major,
+            string supervisorLastName, string jobType, DateTime appDueDate, int maxSalary)
 
-           : base("Person.CreatePerson")
+           : base("Person.CreateJob")
         {
             this.name = name;
             this.minSalary = minSalary;
             this.companyId = companyId;
             this.jobId = jobId; 
-            this.gpa = gpa;
+            this.major = major;
             this.supervisorLastName = supervisorLastName;
             this.jobType = jobType;
             this.appDueDate = appDueDate;
@@ -38,18 +40,18 @@ namespace PersonData.DataDelegates
         base.PrepareCommand(command);
 
         var p = command.Parameters.Add("Name", SqlDbType.NVarChar);
-        p.Value = firstName;
+        p.Value = "firstName";
 
-        p = command.Parameters.Add("MinimumSalary", SqlDbType.INT);
-        p.Value = lastName;
+        p = command.Parameters.Add("MinimumSalary", SqlDbType.Int);
+        p.Value = "lastName";
 
-        p = command.Parameters.Add("CompanyID", SqlDbType.INT);
-        p.Value = email;
+        p = command.Parameters.Add("CompanyID", SqlDbType.Int);
+        p.Value = "email";
 
         p = command.Parameters.Add("JobID", SqlDbType.Int);
         p.Direction = ParameterDirection.Output;
 
-        p = command.Parameters.Add("GPA", SqlDbType.NUMERIC(3,2));
+        p = command.Parameters.Add("GPA", SqlDbType.Decimal);
         p.Direction = ParameterDirection.Output;
 
         p = command.Parameters.Add("SupervisorLastName", SqlDbType.NVarChar);
@@ -58,7 +60,7 @@ namespace PersonData.DataDelegates
         p = command.Parameters.Add("JobType", SqlDbType.NVarChar);
         p.Direction = ParameterDirection.Output;
 
-        p = command.Parameters.Add("AppDueDate", SqlDbType.DATETIMEOFFSET);
+        p = command.Parameters.Add("AppDueDate", SqlDbType.DateTimeOffset);
         p.Direction = ParameterDirection.Output;
 
         p = command.Parameters.Add("MaxSalary", SqlDbType.Int);
@@ -66,9 +68,9 @@ namespace PersonData.DataDelegates
 
     }
 
-    public override Person Translate(SqlCommand command)
+    public override Job Translate(SqlCommand command)
     {
-        return new Person(name, minSalary(int)command.Parameters["CompanyId"].Value, jobId, gpa, supervisorLastName, jobType, appDueDate, maxSalary);
+        return new Job(name, minSalary, (int)command.Parameters["CompanyId"].Value, jobId, major, supervisorLastName, jobType);
     }
 }
 }

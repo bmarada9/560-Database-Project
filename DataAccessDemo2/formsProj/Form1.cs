@@ -44,7 +44,7 @@ namespace FindAJob
         {
             created = true;
             mainPerson = p;
-            PersonData.DataDelegates.CreatePersonDelegate per = new PersonData.DataDelegates.CreatePersonDelegate(p);
+            PersonData.DataDelegates. per = new PersonData.DataDelegates.CreatePersonDelegate(p);
 
         }
 
