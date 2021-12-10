@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PersonData;
+using System.IO;
 
 namespace FindAJob
 {
@@ -22,10 +23,41 @@ namespace FindAJob
         public Form1()
         {
             InitializeComponent();
-           
+
             //read in CSV for jobs
             //read in CSV for people
 
+            InitializeComponent();
+
+            var jreader = new StreamReader(File.OpenRead(@"C:\Users\bmarada\Desktop\560-Database-Project\Table Data\CIS 560 Project Tables - Job.csv"));
+            //var preader = new StreamReader(File.OpenRead(@"C:\Users\bmarada\Desktop\560-Database-Project\Table Data\CIS 560 Project Tables - Person.csv"));
+
+            List<PersonData.Models.Job> jobsList = new List<PersonData.Models.Job>();
+            // List<string> personList = new List<string>();
+
+            var line = jreader.ReadLine();
+            //Console.WriteLine(line);
+            while (!jreader.EndOfStream)//|| !preader.EndOfStream)
+            {
+                var jline = jreader.ReadLine();
+                var jvalues = jline.Split(',');
+
+                //var pline = preader.ReadLine();
+                //var pvalues = pline.Split(',');
+
+                Random rd = new Random();
+                int num = rd.Next(0,19);
+                string majorAccepted = objects.majors[num];
+
+                PersonData.Models.Job job = new PersonData.Models.Job(jvalues[0], Int32.Parse(jvalues[1]), Int32.Parse(jvalues[2]), Int32.Parse(jvalues[3]), majorAccepted, jvalues[5], jvalues[6], Int32.Parse(jvalues[7]), jvalues[8]);
+                jobsList.Add(job);
+                //personLIst.Add(pvalues[0]);
+
+                //foreach (var coloumn2 in personLIst)
+                //{
+                //    Console.WriteLine(coloumn2);
+                //}
+            }
             
         }
 
