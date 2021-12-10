@@ -94,17 +94,91 @@ namespace FindAJob
             
         }
 
-        public void schoolDisplay(List<PersonData.Models.Person> persons)
+        public void schoolDisplay(List<PersonData.Models.School> schools)
         {
+            for (int i = 0; i < schools.Count; i++)
+            {
+                Label sname = new Label();
+                sname.Text = schools[i].Name;
+                schoolTable.Controls.Add(sname, 0, i);
 
+                Label smascot = new Label();
+                smascot.Text = schools[i].Mascot;
+                schoolTable.Controls.Add(smascot, 1, i);
+
+                Label stype = new Label();
+                stype.Text = schools[i].TypeOfSchool;
+                schoolTable.Controls.Add(stype, 2, i);
+
+                Label sapplicants = new Label();
+                Random rd = new Random();
+                sapplicants.Text = rd.Next(1, 15).ToString();
+                schoolTable.Controls.Add(sapplicants, 3, i);
+            }
         }
-        public void candidateDisplay(List<PersonData.Models.Person> persons)
+        public void candidateDisplay(List<PersonData.Models.Person> persons, List<PersonData.Models.Job> jobs)
         {
+            for (int i = 0; i < jobs.Count; i++)
+            {
+                Label jname = new Label();
+                jname.Text = jobs[i].Name;
+                candidateTable.Controls.Add(jname, 0, i);
 
+                Label jmajor = new Label();
+                jmajor.Text = jobs[i].MajorAccepted;
+                candidateTable.Controls.Add(jmajor, 1, i);
+
+                Label pgpa = new Label();
+                pgpa.Text = persons[i].Gpa.ToString();
+                candidateTable.Controls.Add(pgpa, 2, i);
+
+                Label pname = new Label();
+                pname.Text = persons[i].FirstName;
+                candidateTable.Controls.Add(pname, 3, i);
+
+                Label plname = new Label();
+                plname.Text = persons[i].LastName;
+                candidateTable.Controls.Add(plname, 4, i);
+
+            }
         }
         public void salaryDisplay(List<PersonData.Models.Job> jobs)
         {
 
+            for (int i = 0; i < jobs.Count; i++)
+            {
+                Label jname = new Label();
+                jname.Text = objects.companies[findCompanyName(jobs[i].CompanyID)];
+                salaryTable.Controls.Add(jname, 0, i);
+
+                Label jsalary = new Label();
+                jsalary.Text = jobs[i].MinimumSalary.ToString();
+                salaryTable.Controls.Add(jsalary, 1, i);
+
+                Label jtitle = new Label();
+                jtitle.Text = jobs[i].Name;
+                salaryTable.Controls.Add(jtitle, 2, i);
+
+                Label jgpa = new Label();
+                string[] gpa = { "2.0", "2.5", "3.0", "3.5" };
+                Random rd = new Random();
+                jgpa.Text = gpa[rd.Next(0,4)];
+                salaryTable.Controls.Add(jgpa, 3, i);
+
+            }
+        }
+
+        private int findCompanyName(int id)
+        {
+            int index = 0;
+            for (int i = 0; i < objects.companyId.Length; i++)
+            {
+                if (objects.companyId[i].Equals(id))
+                {
+                    index = i;
+                }
+            }
+            return objects.companyId[index];
         }
         
     }
