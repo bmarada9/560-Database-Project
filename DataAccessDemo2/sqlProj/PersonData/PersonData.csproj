@@ -80,11 +80,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CIS 560 Project Tables - Application .csv" />
-    <None Include="CIS 560 Project Tables - Company.csv" />
+    <None Include="CIS 560 Project Tables - Company.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="CIS 560 Project Tables - Degree.csv" />
-    <None Include="CIS 560 Project Tables - Job.csv" />
-    <None Include="CIS 560 Project Tables - Person.csv" />
-    <None Include="CIS 560 Project Tables - School.csv" />
+    <None Include="CIS 560 Project Tables - Job.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="CIS 560 Project Tables - Person.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="CIS 560 Project Tables - School.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

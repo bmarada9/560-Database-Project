@@ -12,12 +12,13 @@ using System.IO;
 
 namespace FindAJob
 {
-    
+
     public partial class Form1 : Form
     {
         public static bool created = false;
         public static PersonData.Models.Person mainPerson;
         public static displayPage display;
+        public static List<PersonData.Models.Job> jobsList;
         //table of jobs
         //table of people
         public Form1()
@@ -29,10 +30,10 @@ namespace FindAJob
 
             InitializeComponent();
 
-            var jreader = new StreamReader(File.OpenRead(@"C:\Users\bmarada\Desktop\560-Database-Project\Table Data\CIS 560 Project Tables - Job.csv"));
+            var jreader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Job.csv"));
             //var preader = new StreamReader(File.OpenRead(@"C:\Users\bmarada\Desktop\560-Database-Project\Table Data\CIS 560 Project Tables - Person.csv"));
 
-            List<PersonData.Models.Job> jobsList = new List<PersonData.Models.Job>();
+            jobsList = new List<PersonData.Models.Job>();
             // List<string> personList = new List<string>();
 
             var line = jreader.ReadLine();
@@ -46,10 +47,10 @@ namespace FindAJob
                 //var pvalues = pline.Split(',');
 
                 Random rd = new Random();
-                int num = rd.Next(0,19);
+                int num = rd.Next(0, 19);
                 string majorAccepted = objects.majors[num];
 
-                PersonData.Models.Job job = new PersonData.Models.Job(jvalues[0], Int32.Parse(jvalues[1]), Int32.Parse(jvalues[2]), Int32.Parse(jvalues[3]), majorAccepted, jvalues[5], jvalues[6], Int32.Parse(jvalues[7]), jvalues[8]);
+                PersonData.Models.Job job = new PersonData.Models.Job(jvalues[0], Int32.Parse(jvalues[1]), Int32.Parse(jvalues[2]), Int32.Parse(jvalues[3]), majorAccepted, jvalues[5], jvalues[6], Int32.Parse(jvalues[8]), jvalues[7]);
                 jobsList.Add(job);
                 //personLIst.Add(pvalues[0]);
 
@@ -60,7 +61,7 @@ namespace FindAJob
             }
 
             Console.WriteLine(jobsList[5].Name);
-            
+
         }
 
         private void createProfile_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace FindAJob
         {
             addJob aj = new addJob();
             aj.Show();
-            
+
         }
 
 
@@ -87,25 +88,36 @@ namespace FindAJob
         {
             created = true;
             mainPerson = p;
-            PersonData.DataDelegates.CreatePersonDelegate per = new PersonData.DataDelegates.CreatePersonDelegate(p.PersonId,p.FirstName,p.LastName,p.Gpa,p.Email,p.Major,p.Graduated,p.PhoneNum,p.SchoolID,p.ExpSalary,p.Comments);
+            PersonData.DataDelegates.CreatePersonDelegate per = new PersonData.DataDelegates.CreatePersonDelegate(p.PersonId, p.FirstName, p.LastName, p.Gpa, p.Email, p.Major, p.Graduated, p.PhoneNum, p.SchoolID, p.ExpSalary, p.Comments);
             //add person to table
         }
 
-        public static void createJob(PersonData.Models.Job j )
+        public static void createJob(PersonData.Models.Job j)
         {
-            PersonData.DataDelegates.CreateJobDelegate jo = new PersonData.DataDelegates.CreateJobDelegate(j.Name,j.MinimumSalary,j.CompanyID,j.JobID,j.MajorAccepted,j.SupervisorLastName,j.JobType,j.MaximumSalary,j.ApplicationDueDate);
+            PersonData.DataDelegates.CreateJobDelegate jo = new PersonData.DataDelegates.CreateJobDelegate(j.Name, j.MinimumSalary, j.CompanyID, j.JobID, j.MajorAccepted, j.SupervisorLastName, j.JobType, j.MaximumSalary, j.ApplicationDueDate);
             //add job to table
         }
 
         public static void reportQuery(int tab, string filter)
         {
+            int compId = objects.companyId[findCompanyId(filter)];
             //filter - the company name or the major
             switch (tab)
             {
+
                 case 1:
                     //By Company aka NumberofJobs
                     PersonData.DataDelegates.NumberOfJobsDelegate nj = new PersonData.DataDelegates.NumberOfJobsDelegate(filter);
 
+                    List<PersonData.Models.Job> j = new List<PersonData.Models.Job>();
+                    for (int i = 0; i < jobsList.Count; i++)
+                    {
+                        if (jobsList[i].CompanyID == compId)
+                        {
+                            j.Add(jobsList[i]);
+                        }
+                    }
+                    display.companyDisplay(j);
                     //new table
                     //add jobs with company name ==
                     break;
@@ -128,6 +140,18 @@ namespace FindAJob
                     //add first salary
                     break;
             }
+        }
+        private static int findCompanyId(string name)
+        {
+            int index = 0;
+            for (int i = 0; i < objects.companies.Length; i++)
+            {
+                if (objects.companies[i].Equals(name))
+                {
+                    index = i;
+                }
+            }
+            return objects.companyId[index];
         }
     }
     public class objects
