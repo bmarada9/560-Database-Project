@@ -29,7 +29,9 @@ namespace FindAJob
         public Form1()
         {
             InitializeComponent();
-
+            Array.Sort(objects.companies, (x, y) => String.Compare(x, y));
+            Array.Sort(objects.schools, (x, y) => String.Compare(x, y));
+            Array.Sort(objects.majors, (x, y) => String.Compare(x, y));
             var jreader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Job.csv"));
             var preader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Person.csv"));
             var creader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Company.csv"));
@@ -155,6 +157,7 @@ namespace FindAJob
                             j.Add(jobsList[i]);
                         }
                     }
+                    
                     display.companyDisplay(j);
                     break;
                 case 2:
@@ -209,9 +212,8 @@ namespace FindAJob
                             jj.Add(jobsList[i]);
                         }
                     }
-               //     List<PersonData.Models.Job> objListOrder =
-     // jj.OrderBy(PersonData.Models.Job => PersonData.Models.Job.MinimumSalary).ToList();
-                    display.salaryDisplay(jj);
+                    List<PersonData.Models.Job> jjj = jj.OrderByDescending(a => a.MinimumSalary).ToList();
+                    display.salaryDisplay(jjj);
                     //sort by salary
                     break;
             }
