@@ -139,11 +139,10 @@ namespace FindAJob
 
         public static void reportQuery(int tab, string filter)
         {
-            int compId = objects.companyId[findCompanyId(filter)];
+            int compId = findCompanyId(filter);
             //filter - the company name or the major
             switch (tab)
             {
-
                 case 1:
                     //By Company aka NumberofJobs
                     PersonData.DataDelegates.NumberOfJobsDelegate nj = new PersonData.DataDelegates.NumberOfJobsDelegate(filter);
@@ -157,24 +156,41 @@ namespace FindAJob
                         }
                     }
                     display.companyDisplay(j);
-                    //new table
-                    //add jobs with company name ==
                     break;
                 case 2:
                     //Popular Schools
                     PersonData.DataDelegates.FetchMostPopularSchoolDelegate fm = new PersonData.DataDelegates.FetchMostPopularSchoolDelegate(filter);
-                    //new table
-                    //method for popular schools
+                    List<PersonData.Models.School> schools = new List<PersonData.Models.School>();
+                    for (int i = 0; i < schoolList.Count; i++)
+                    {
+                        if (schoolList[i].SchoolID < compId/6)
+                        {
+                            schools.Add(schoolList[i]);
+                        }
+                    }
+                    display.schoolDisplay(schools);
                     break;
                 case 3:
                     //Best Candidates aka Candidates
                     PersonData.DataDelegates.FetchBestCandidateDelegate fb = new PersonData.DataDelegates.FetchBestCandidateDelegate(filter);
-                    //new table
-                    //add first person
+                    List<PersonData.Models.Person> candidates = new List<PersonData.Models.Person>();
+                    List<PersonData.Models.Job> jobs = new List<PersonData.Models.Job>();
+
                     break;
                 case 4:
                     //Best Salaries aka ListofJobs
                     PersonData.DataDelegates.FetchCompanyAndSalaryDelegate fc = new PersonData.DataDelegates.FetchCompanyAndSalaryDelegate(filter);
+                    List<PersonData.Models.Job> jj = new List<PersonData.Models.Job>();
+                    for(int i =0; i<jobsList.Count; i++)
+                    {
+                        if(jobsList[i].CompanyID == compId)
+                        {
+                            jj.Add(jobsList[i]);
+                        }
+                    }
+               //     List<PersonData.Models.Job> objListOrder =
+     // jj.OrderBy(PersonData.Models.Job => PersonData.Models.Job.MinimumSalary).ToList();
+                    display.salaryDisplay(jj);
                     //new table 
                     //add first salary
                     break;

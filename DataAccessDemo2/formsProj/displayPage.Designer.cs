@@ -88,12 +88,9 @@
             this.companyTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.companyTable.Location = new System.Drawing.Point(165, 35);
             this.companyTable.Name = "companyTable";
-            this.companyTable.RowCount = 1;
-            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
+            this.companyTable.RowCount = 2;
+            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.companyTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.companyTable.Size = new System.Drawing.Size(707, 323);
             this.companyTable.TabIndex = 0;
             // 
@@ -327,12 +324,9 @@
             this.schoolTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.schoolTable.Location = new System.Drawing.Point(177, 35);
             this.schoolTable.Name = "schoolTable";
-            this.schoolTable.RowCount = 1;
-            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
+            this.schoolTable.RowCount = 2;
+            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.schoolTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.schoolTable.Size = new System.Drawing.Size(707, 323);
             this.schoolTable.TabIndex = 6;
             // 
@@ -459,12 +453,9 @@
             this.candidateTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.candidateTable.Location = new System.Drawing.Point(183, 37);
             this.candidateTable.Name = "candidateTable";
-            this.candidateTable.RowCount = 1;
-            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
+            this.candidateTable.RowCount = 2;
+            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.candidateTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.candidateTable.Size = new System.Drawing.Size(707, 323);
             this.candidateTable.TabIndex = 8;
             // 
@@ -577,12 +568,9 @@
             this.salaryTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salaryTable.Location = new System.Drawing.Point(183, 37);
             this.salaryTable.Name = "salaryTable";
-            this.salaryTable.RowCount = 1;
-            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
-            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 323F));
+            this.salaryTable.RowCount = 2;
+            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.salaryTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.salaryTable.Size = new System.Drawing.Size(707, 323);
             this.salaryTable.TabIndex = 14;
             // 

@@ -73,7 +73,11 @@ namespace FindAJob
         }
         public void companyDisplay(List<PersonData.Models.Job> jobs)
         {
-            for(int i =0; i < jobs.Count; i++)
+            while (companyTable.Controls.Count > 0)
+            {
+                companyTable.Controls[0].Dispose();
+            }
+            for (int i =0; i < jobs.Count; i++)
             {
                 Label jname = new Label();
                 jname.Text = jobs[i].Name;
@@ -90,14 +94,30 @@ namespace FindAJob
                 Label jduedate = new Label();
                 jduedate.Text = jobs[i].ApplicationDueDate;
                 companyTable.Controls.Add(jduedate,3,i);
+                if (Form1.created == true)
+                {
+                    Button apply = new Button();
+                    apply.Text = "Apply";
+                    apply.Click += applyButtonClick;
+                    companyTable.Controls.Add(apply, 4, i);
+                }
+                
             }
             
         }
 
         public void schoolDisplay(List<PersonData.Models.School> schools)
         {
+            while (schoolTable.Controls.Count > 0)
+            {
+                schoolTable.Controls[0].Dispose();
+            }
+            int max = 6;
+            int min = 4;
+
             for (int i = 0; i < schools.Count; i++)
             {
+                
                 Label sname = new Label();
                 sname.Text = schools[i].Name;
                 schoolTable.Controls.Add(sname, 0, i);
@@ -107,17 +127,30 @@ namespace FindAJob
                 schoolTable.Controls.Add(smascot, 1, i);
 
                 Label stype = new Label();
-                stype.Text = schools[i].TypeOfSchool;
+                if (schools[i].TypeOfSchool.Equals("1"))
+                {
+                    stype.Text = "Private";
+                }
+                else { stype.Text = "Public"; }
                 schoolTable.Controls.Add(stype, 2, i);
 
                 Label sapplicants = new Label();
                 Random rd = new Random();
-                sapplicants.Text = rd.Next(1, 15).ToString();
+                sapplicants.Text = rd.Next(min, max).ToString();
                 schoolTable.Controls.Add(sapplicants, 3, i);
+                if (min > 1)
+                {
+                    min--;
+                    max--;
+                }
             }
         }
         public void candidateDisplay(List<PersonData.Models.Person> persons, List<PersonData.Models.Job> jobs)
         {
+            while (candidateTable.Controls.Count > 0)
+            {
+                candidateTable.Controls[0].Dispose();
+            }
             for (int i = 0; i < jobs.Count; i++)
             {
                 Label jname = new Label();
@@ -144,11 +177,14 @@ namespace FindAJob
         }
         public void salaryDisplay(List<PersonData.Models.Job> jobs)
         {
-
+            while (salaryTable.Controls.Count > 0)
+            {
+                salaryTable.Controls[0].Dispose();
+            }
             for (int i = 0; i < jobs.Count; i++)
             {
                 Label jname = new Label();
-                jname.Text = objects.companies[findCompanyName(jobs[i].CompanyID)];
+                jname.Text = findCompanyName(jobs[i].CompanyID).ToString();
                 salaryTable.Controls.Add(jname, 0, i);
 
                 Label jsalary = new Label();
