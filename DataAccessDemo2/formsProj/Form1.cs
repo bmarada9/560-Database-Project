@@ -18,49 +18,86 @@ namespace FindAJob
         public static bool created = false;
         public static PersonData.Models.Person mainPerson;
         public static displayPage display;
+
         public static List<PersonData.Models.Job> jobsList;
+        public static List<PersonData.Models.Person> personList;
+        public static List<PersonData.Models.Company> companyList;
+        public static List<PersonData.Models.School> schoolList;
+
         //table of jobs
         //table of people
         public Form1()
         {
             InitializeComponent();
 
-            //read in CSV for jobs
-            //read in CSV for people
-
-            InitializeComponent();
-
             var jreader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Job.csv"));
-            //var preader = new StreamReader(File.OpenRead(@"C:\Users\bmarada\Desktop\560-Database-Project\Table Data\CIS 560 Project Tables - Person.csv"));
+            var preader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Person.csv"));
+            var creader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - Company.csv"));
+            var sreader = new StreamReader(File.OpenRead(@"CIS 560 Project Tables - School.csv"));
 
             jobsList = new List<PersonData.Models.Job>();
-            // List<string> personList = new List<string>();
+            personList = new List<PersonData.Models.Person>();
+            companyList = new List<PersonData.Models.Company>();
+            schoolList = new List<PersonData.Models.School>();
 
             var line = jreader.ReadLine();
-            //Console.WriteLine(line);
-            while (!jreader.EndOfStream)//|| !preader.EndOfStream)
+            var line2 = preader.ReadLine();
+            var line3 = creader.ReadLine();
+            var line4 = sreader.ReadLine();
+
+            Random rd = new Random();
+
+            while (!jreader.EndOfStream || !preader.EndOfStream || !creader.EndOfStream || !sreader.EndOfStream)
             {
                 var jline = jreader.ReadLine();
                 var jvalues = jline.Split(',');
 
-                //var pline = preader.ReadLine();
-                //var pvalues = pline.Split(',');
+                var pline = preader.ReadLine();
+                var pvalues = pline.Split(',');
 
-                Random rd = new Random();
+                var cline = creader.ReadLine();
+                var cvalues = cline.Split(',');
+
+                var sline = sreader.ReadLine();
+                var svalues = sline.Split(',');
+
                 int num = rd.Next(0, 19);
                 string majorAccepted = objects.majors[num];
 
                 PersonData.Models.Job job = new PersonData.Models.Job(jvalues[0], Int32.Parse(jvalues[1]), Int32.Parse(jvalues[2]), Int32.Parse(jvalues[3]), majorAccepted, jvalues[5], jvalues[6], Int32.Parse(jvalues[8]), jvalues[7]);
                 jobsList.Add(job);
-                //personLIst.Add(pvalues[0]);
 
-                //foreach (var coloumn2 in personLIst)
-                //{
-                //    Console.WriteLine(coloumn2);
-                //}
+                bool grad;
+                if (Int32.Parse(pvalues[5]) == 0)
+                {
+                    grad = false;
+                }
+                else
+                {
+                    grad = true;
+                }
+
+                PersonData.Models.Person person = new PersonData.Models.Person(Int32.Parse(pvalues[0]), pvalues[1], pvalues[2], Double.Parse(pvalues[3]), pvalues[4], pvalues[5], grad, pvalues[7], Int32.Parse(pvalues[8]), Int32.Parse(pvalues[9]), pvalues[10]);
+                personList.Add(person);
+
+                PersonData.Models.Company company = new PersonData.Models.Company(cvalues[0], Int32.Parse(cvalues[1]), Int32.Parse(cvalues[2]), cvalues[3], cvalues[4], cvalues[5], cvalues[6], Int32.Parse(cvalues[7]), Int32.Parse(cvalues[8]), cvalues[9]);
+                companyList.Add(company);
+
+                PersonData.Models.School school = new PersonData.Models.School(svalues[0], Int32.Parse(svalues[1]), Int32.Parse(svalues[2]), svalues[3], svalues[4], Int32.Parse(svalues[5]), svalues[6], svalues[7], Int32.Parse(svalues[8]), Int32.Parse(svalues[9]));
+                schoolList.Add(school);
+
             }
 
-            Console.WriteLine(jobsList[5].Name);
+            Console.WriteLine(personList.Count);
+            Console.WriteLine(jobsList.Count);
+            Console.WriteLine(companyList.Count);
+            Console.WriteLine(schoolList.Count);
+            Console.WriteLine(jobsList[9].Name);
+            Console.WriteLine(personList[9].FirstName);
+            Console.WriteLine(companyList[9].Name);
+            Console.WriteLine(schoolList[9].Name);
+
+
 
         }
 
@@ -90,12 +127,14 @@ namespace FindAJob
             mainPerson = p;
             PersonData.DataDelegates.CreatePersonDelegate per = new PersonData.DataDelegates.CreatePersonDelegate(p.PersonId, p.FirstName, p.LastName, p.Gpa, p.Email, p.Major, p.Graduated, p.PhoneNum, p.SchoolID, p.ExpSalary, p.Comments);
             //add person to table
+            personList.Add(p);
         }
 
         public static void createJob(PersonData.Models.Job j)
         {
             PersonData.DataDelegates.CreateJobDelegate jo = new PersonData.DataDelegates.CreateJobDelegate(j.Name, j.MinimumSalary, j.CompanyID, j.JobID, j.MajorAccepted, j.SupervisorLastName, j.JobType, j.MaximumSalary, j.ApplicationDueDate);
             //add job to table
+            jobsList.Add(j);
         }
 
         public static void reportQuery(int tab, string filter)
