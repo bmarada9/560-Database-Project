@@ -184,7 +184,7 @@ namespace FindAJob
             for (int i = 0; i < jobs.Count; i++)
             {
                 Label jname = new Label();
-                jname.Text = findCompanyName(jobs[i].CompanyID).ToString();
+                jname.Text = findCompanyName(jobs[i].CompanyID);
                 salaryTable.Controls.Add(jname, 0, i);
 
                 Label jsalary = new Label();
@@ -204,17 +204,18 @@ namespace FindAJob
             }
         }
 
-        private int findCompanyName(int id)
+        private string findCompanyName(int id)
         {
             int index = 0;
-            for (int i = 0; i < objects.companyId.Length; i++)
+            for (int i = 0; i < objects.companies.Length; i++)
             {
-                if (objects.companyId[i].Equals(id))
+                if (objects.companyId[i] == (id))
                 {
                     index = i;
+                    break;
                 }
             }
-            return objects.companyId[index];
+            return objects.companies[index];
         }
         
     }

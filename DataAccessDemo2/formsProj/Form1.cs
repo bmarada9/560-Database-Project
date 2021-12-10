@@ -183,7 +183,7 @@ namespace FindAJob
                     List<PersonData.Models.Job> jj = new List<PersonData.Models.Job>();
                     for(int i =0; i<jobsList.Count; i++)
                     {
-                        if(jobsList[i].CompanyID == compId)
+                        if(jobsList[i].MajorAccepted.Equals(filter))
                         {
                             jj.Add(jobsList[i]);
                         }
@@ -191,8 +191,7 @@ namespace FindAJob
                //     List<PersonData.Models.Job> objListOrder =
      // jj.OrderBy(PersonData.Models.Job => PersonData.Models.Job.MinimumSalary).ToList();
                     display.salaryDisplay(jj);
-                    //new table 
-                    //add first salary
+                    //sort by salary
                     break;
             }
         }
