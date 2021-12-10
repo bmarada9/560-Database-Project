@@ -58,6 +58,8 @@ namespace FindAJob
                 //    Console.WriteLine(coloumn2);
                 //}
             }
+
+            Console.WriteLine(jobsList[5].Name);
             
         }
 
