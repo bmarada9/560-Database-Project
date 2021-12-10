@@ -31,5 +31,20 @@ namespace PersonData.Models
          ExpSalary = salary;
          Comments = comments;
       }
+
+       public Person()
+        {
+            PersonId = 0000;
+            FirstName = "";
+            LastName = "";
+            Gpa = 0.0;
+            Email = "";
+            Major = "";
+            Graduated = false;
+            PhoneNum = "";
+            SchoolID = 0000;
+            ExpSalary = 0000;
+            Comments = "";
+        }
    }
 }

@@ -77,7 +77,7 @@ namespace FindAJob
                     grad = true;
                 }
 
-                PersonData.Models.Person person = new PersonData.Models.Person(Int32.Parse(pvalues[0]), pvalues[1], pvalues[2], Double.Parse(pvalues[3]), pvalues[4], pvalues[5], grad, pvalues[7], Int32.Parse(pvalues[8]), Int32.Parse(pvalues[9]), pvalues[10]);
+                PersonData.Models.Person person = new PersonData.Models.Person(Int32.Parse(pvalues[0]), pvalues[1], pvalues[2], Double.Parse(pvalues[3]),pvalues[7], pvalues[4], grad,pvalues[6], Int32.Parse(pvalues[8]), Int32.Parse(pvalues[9]), pvalues[10]);
                 personList.Add(person);
 
                 PersonData.Models.Company company = new PersonData.Models.Company(cvalues[0], Int32.Parse(cvalues[1]), Int32.Parse(cvalues[2]), cvalues[3], cvalues[4], cvalues[5], cvalues[6], Int32.Parse(cvalues[7]), Int32.Parse(cvalues[8]), cvalues[9]);
@@ -175,7 +175,28 @@ namespace FindAJob
                     PersonData.DataDelegates.FetchBestCandidateDelegate fb = new PersonData.DataDelegates.FetchBestCandidateDelegate(filter);
                     List<PersonData.Models.Person> candidates = new List<PersonData.Models.Person>();
                     List<PersonData.Models.Job> jobs = new List<PersonData.Models.Job>();
-
+                    for (int i = 0; i < jobsList.Count; i++)
+                    {
+                        if (jobsList[i].CompanyID == compId)
+                        {
+                            List<PersonData.Models.Person> p = new List<PersonData.Models.Person>();
+                            jobs.Add(jobsList[i]);
+                            for (int k = 0; k < personList.Count; k++)
+                            {
+                                PersonData.Models.Person t = personList[k];
+                                if (t.Major.Equals(jobsList[i].MajorAccepted)) { p.Add(t); }
+                            }
+                            PersonData.Models.Person main = new PersonData.Models.Person();
+                            for(int k = 0; k<p.Count; k++)
+                            {
+                                double maxGPA = 0.0;
+                                if (p[k].Gpa > maxGPA) { main = p[k]; maxGPA = p[k].Gpa; }
+                            }
+                            candidates.Add(main);
+                        }
+                    }
+                    display.candidateDisplay(candidates, jobs);
+                    //sort by GPA
                     break;
                 case 4:
                     //Best Salaries aka ListofJobs
